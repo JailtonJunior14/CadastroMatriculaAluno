@@ -26,41 +26,64 @@ namespace CadastroMatriculaAluno
                 switch (curso)
                 {
                     case "d":
-                        contD++;
-                        Console.WriteLine("Nome do aluno:");
-                        string aluno = Console.ReadLine();
-                        Console.Clear();
+                        if (contD < 5)
+                        {
+                            contD++;
+                            Console.WriteLine("Cadastrado");
+                            
+                        }
+                        else
+                        {
+                            Console.WriteLine("Não há vagas");
+                        }
+                        
                         break;
                     case "m":
-                        Console.WriteLine("Nome do aluno:");
-                        aluno = Console.ReadLine();
-                        Console.Clear();
-                        contM++;
+
+                        if (contM < 5)
+                        {
+                            contM++;
+                            Console.WriteLine("Cadastrado");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Não há vagas");
+                        }
+                        
+                        
                         break;
                     case "a":
-                        Console.WriteLine("Nome do aluno:");
-                        aluno = Console.ReadLine();
-                        contA++;
-                        Console.Clear();
+                      
+                        if (contA < 5)
+                        {
+                            contA++;
+                            Console.WriteLine("Cadastrado");
+                            
+                        }
+                        else
+                        {
+                            Console.WriteLine("Não há vagas");
+                        }
+                        
                         break;
                     case "e":
-                        Console.WriteLine("Nome do aluno:");
-                        aluno = Console.ReadLine();
-                        contE++;
-                        Console.Clear();
+                        
+                        if (contE < 5)
+                        {
+
+                            Console.WriteLine("Cadastrado");
+                            contE++;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Não há vagas");
+                        }
+
                         break;
                     default: 
                         Console.WriteLine("Opção invalida");
                         break;
 
-                }
-                if ( contD || contM || contE || contA > 5 )
-                {
-                    Console.WriteLine("Não a mais vagas");
-                    contD--;
-                    contM--;
-                    contE--;
-                    contA--;
                 }
                 Console.WriteLine("Deseja continuar: ");
                 ini = Console.ReadLine().ToLower();
